@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+</head>
+
+<body>
+    <div>
+        <!-- If two or more radio_buttons have same name and at a time only one can be switched -->
+        <h1>Travel form for our trip</h1>
+        <form action="form.php">
+            <!-- placeholder is faded text and we write in it it vanishes -->
+            <input type="text" placeholder="Enter your Name"><br>
+            <!-- HTML tag unique identifier is id lis we have our roll_no -->
+            <label for="SectionIDa">
+                <input type="radio" value="Section a" name="Section" id="SectionIDa"> Section A
+            </label>
+            <label for="SectionIDb">
+                <input type="radio" value="Section b" name="Section" id="SectionIDb"> Section B
+            </label>
+            <label for="SectionIDc">
+                <input type="radio" value="Section c" name="Section" id="SectionIDc" class="red blue"> Section C
+            </label>
+            <br>
+            <!-- for and name should match  and these all in light green are ATTRIBUTES-->
+            <input type="checkbox" id="foodcanteen" class="red" name="canteen">
+            <label for="foodCanteen">Want food canteen card</label><br>
+            <textarea name="explain" id="explain" cols="30" rows="10" placeholder="Explain why you want to join"></textarea><br>
+            <!-- most of the cases name and id are same -->
+            <select name="car" id="car">Select Your CAR
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            </select>
+        </form>
+    </div>
+</body>
+
+</html>

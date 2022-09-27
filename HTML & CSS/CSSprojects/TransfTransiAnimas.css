@@ -1,0 +1,30 @@
+.container {
+    background-color: red;
+    height: 455px;
+}
+
+.box {
+    border: 2px solid black;
+    display: inline-block;
+    /* translate in x and y at same time   0.25turn or can be in degree*/
+    /* transform: translate(34px, 56px) rotateX(45deg); */
+    /* form where to transform */
+    /* transform-origin: 0; */
+    /* transform: scale(2, 4); */
+    /* transform: skew(4deg, 6deg); */
+}
+
+img {
+    width: 146px;
+    height: 455px;
+    /* transition-property: width;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    transition-delay: 3s; */
+    transition: width 1s ease-in-out, height 3s ease-in;
+}
+
+
+/* img:hover {
+    width: 56px;
+}  */

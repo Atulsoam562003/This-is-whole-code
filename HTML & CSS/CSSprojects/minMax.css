@@ -1,0 +1,7 @@
+.container {
+    width: 334px;
+    height: 114vh;
+    background-color: green;
+    /* min-height: 50vh; */
+    max-height: 50vh;
+}

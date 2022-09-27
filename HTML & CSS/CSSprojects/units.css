@@ -1,0 +1,21 @@
+html {
+    /* font-size: 45px; */
+}
+
+.container {
+    font-size: 24px;
+}
+
+.box {
+    background-color: rebeccapurple;
+    /* font-size: 12px; */
+    /* font-size: 3em; it means 3 times font size of my parent */
+    /* font-size: 3rem; this is relative to html tag */
+}
+
+.box2 {
+    background-color: green;
+    /* width: 434px; */
+    width: 50vw;
+    height: 50vh;
+}

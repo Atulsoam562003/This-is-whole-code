@@ -1,0 +1,55 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+ul {
+    background-color: crimson;
+}
+
+li {
+    /* display: inline; */
+    /* inside or outside will tell where is my bullet point see the mozilla inspect */
+    list-style: square inside;
+}
+
+header {
+    background-color: black;
+    color: white;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+p {
+    text-align: center;
+    border: 2px solid red;
+}
+
+.container {
+    padding: 0 74px;
+    background-color: darkorange;
+    height: 2323px;
+    width: 50vw;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    /*more it will it will be above all the elements*/
+}
+
+.box {
+    height: 20px;
+    width: 70px;
+    background-color: chartreuse;
+    /* position: relative; */
+    position: absolute;
+    top: -58px;
+    left: 685px;
+}
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(80, 158, 227);
+}

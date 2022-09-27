@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marginCollapse</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            background-color: green;
+            margin: 34px;
+            height: 220px;
+            width: 233px;
+            border: 2px solid black;
+            /* box-sizing: content-box; */
+        }
+        
+        .box2 {
+            background-color: aqua;
+            /* margin: 24px; */
+            height: 20px;
+            width: 100%;
+            border: 5px solid grey;
+            padding: 6px;
+            height: 30px;
+            /* not child box will fill inside the parent box including all width and padd and border */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil doloribus quibusdam asperiores aspernatur magnam iure molestiae quos, culpa, rerum aut in rem molestias cupiditate perferendis libero distinctio magni praesentium!
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

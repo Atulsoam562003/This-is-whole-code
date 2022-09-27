@@ -1,0 +1,17 @@
+.flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-2 {
+    margin: 3px 0;
+}
+
+.text-Center {
+    text-align: center;
+}
+
+.bor {
+    border: 0.5px solid black;
+}

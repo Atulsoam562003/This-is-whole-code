@@ -1,0 +1,23 @@
+.container {
+    background-color: red;
+    height: 34vh;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lawngreen;
+}
+
+@media screen and (max-width: 800px) {
+    /* form 0 to 800 px width it will be applied */
+    body {
+        background-color: blueviolet;
+    }
+    .container {
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: orange;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- heading and paragraph -->
+    <h1>List of Books to Read</h1>
+    <h2>List of Books to Read</h2>
+    <h3>List of Books to Read</h3>
+    <h4>List of Books to Read</h4>
+    <h5>List of Books to Read</h5>
+    <h6>List of Books to Read</h6>
+    <p>There are a lot of books to read for you :)</p>
+    <hr>
+
+    <!-- Example of absolute link -->
+    <a href="https://www.codewithharry.com">Click here to go to harries website</a>
+    <!-- Example of relative link -->
+    <a href="/about.html">Go to about</a>
+    <hr>
+
+    <!-- Image Tag -->
+
+    <!-- absolute source URL -->
+    <!-- <img src="https://media.istockphoto.com/photos/areuse-river-in-the-neuchtel-jura-switzerland-panorama-picture-id1130739032" alt="NatureIg"> -->
+
+    <!-- Relative URL -->
+    <img src="image.jpg" alt="Nature:)" width="400px">
+
+    <!-- Bold , Italic and Underline tags -->
+    <hr>
+    <br>
+    <b>This is Bold</b><br>
+    <i>This is Italic</i><br>
+    <u>This text is underlined</u><br>
+    <hr>
+    <big>This is Big</big><br>
+    <small>This is small</small><br>
+
+    <!-- Subscript -->
+    <p>CO <sub>2</sub></p><br>
+    <p>H<sub>2</sub> O</p> <br>
+
+    <!-- superscript -->
+    <p>2x <sup>3</sup> + 9x <sup>2</sup> + 23x + 1</p> <br>
+    <!-- Using pre Tag to display #DITTO SAME -->
+    <hr>
+    <pre><b>
+void Unknown(int *p, int num);
+void HardToFollow(int *p, int q, int *num);
+
+void Unknown(int *p, int num) {
+  int *q;
+
+  q = &num;
+  *p = *q + 2;
+  num = 7;
+}
+
+void HardToFollow(int *p, int q, int *num) {
+  *p = q + *num;
+  *num = q;
+  num = p;
+  p = &q;
+  Unknown(num, *p);
+}
+
+main() {
+  int *q;
+  int trouble[3];
+
+  trouble[0] = 1;
+  q = &trouble[1];
+  *q = 2;
+  trouble[2] = 3;
+
+  HardToFollow(q, trouble[0], &trouble[2]);
+  Unknown(&trouble[0], *q);
+
+  cout << *q << " " << trouble[0] << " " << trouble[2];
+}
+</b> </pre>
+    <br>
+    <hr>
+    <p>C + O<sub>2</sub> &rarr; CO<sub>2</sub></p>
+
+</body>
+
+</html>

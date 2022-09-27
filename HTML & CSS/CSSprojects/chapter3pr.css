@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border: 3px;
+    height: 70px;
+    background-color: green;
+}
+
+.content {
+    padding: 34px;
+    height: 90vh;
+    background-color: red;
+    margin: 34px;
+}
+
+footer {
+    background-color: cyan;
+    margin: 23px;
+}
+
+.center {
+    text-align: center;
+}
