@@ -2,6 +2,7 @@
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL)
 #define ll long long int
 #define len(s) s.length()
+#define endl  '\n'
 #define rep(i,n) for (int i=0;i<n;i++)
 #define repi(i,x,n) for (int i=x;i<n;i++)
 #define br cout<<endl
