@@ -82,34 +82,22 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 const int N = 1e9 + 7;
 const int INF = LONG_LONG_MAX;
 
-bool isPoss(vector<int> v,vector<int> liya,int mid) {
-    rep(i,mid) v.push_back(100);
-    int start = v.size()/4;
-    
-    vector<int> temp(mid,0);
-    rep(i,liya.size()) temp.push_back(liya[i]);
-    
-    int sum1 = accumulate(v.begin() + start,v.end(),0);
-    int sum2 = accumulate(temp.begin() + start,temp.end(),0);
-    return sum1 >= sum2;
-}
-
 void solve() {
     int n; cin>>n;
-    vector<int> v(n),liya(n); for(auto &x : v) cin>>x;
-    for(auto &x : liya) cin>>x;
-    sort(all(v));
-    sort(all(liya));
-    
-    int lo = 0;
-    int hi = 1e5;
-    int ans = 0;
-    while(lo <= hi) {
-        int mid = lo + (hi - lo)/ 2;
-        if(isPoss(v,liya,mid)) ans = mid , hi = mid - 1;
-        else lo = mid + 1;
+    vector<int> d(n); for(auto &x : d)  cin>>x;
+    vector<int> ans;
+    ans.push_back(d[0]);
+    for(int i = 0; i < n - 1; i++) {        
+        ans.push_back(ans[i] + d[i + 1]);
+    }    
+    vector<int> temp(n,0);
+    temp[0] = d[0];
+    for(int i = 1; i < n; i++) {
+        temp[i] = (temp[i - 1] - d[i]);
+        if(temp[i] < 0) temp[i] = ans[i];
+        else if(temp[i] >= 0 && temp[i] != ans[i]) {cout<<-1<<endl; return;}
     }
-    cout<<ans<<endl;
+    print(ans);
 }
 
 int32_t main()
