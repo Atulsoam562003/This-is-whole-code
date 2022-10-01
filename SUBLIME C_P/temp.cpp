@@ -83,21 +83,8 @@ const int N = 1e9 + 7;
 const int INF = LONG_LONG_MAX;
 
 void solve() {
-    int n; cin>>n;
-    vector<int> d(n); for(auto &x : d)  cin>>x;
-    vector<int> ans;
-    ans.push_back(d[0]);
-    for(int i = 0; i < n - 1; i++) {        
-        ans.push_back(ans[i] + d[i + 1]);
-    }    
-    vector<int> temp(n,0);
-    temp[0] = d[0];
-    for(int i = 1; i < n; i++) {
-        temp[i] = (temp[i - 1] - d[i]);
-        if(temp[i] < 0) temp[i] = ans[i];
-        else if(temp[i] >= 0 && temp[i] != ans[i]) {cout<<-1<<endl; return;}
-    }
-    print(ans);
+    double n,r; cin>>n>>r;
+    cout<<fixed<<setprecision(7)<<r*(sin(pi/n)/(1 - sin(pi/n)))<<endl;
 }
 
 int32_t main()
@@ -107,7 +94,7 @@ int32_t main()
     clock_t z = clock();
 
     int t = 1,i = 1;
-    cin >> t;
+    // cin >> t;
     while (t--){  
           // cout<<"Case #"<<i++<<": "; 
           solve();    
