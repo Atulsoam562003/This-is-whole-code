@@ -1,7 +1,5 @@
 function fibonacciGenerator(n) {
     var arr = [];
-    if(n == 1) arr.push(0);
-    if(n == 2) arr.push(1);
     var prev = 0,now = 1;
     for(var i = 1; i <= n; i++) {
         arr.push(prev);
@@ -12,4 +10,4 @@ function fibonacciGenerator(n) {
     return arr;
 }
 
-console.log(fibonacciGenerator(10));
+console.log(fibonacciGenerator(5));
