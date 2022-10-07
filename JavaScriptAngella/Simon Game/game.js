@@ -14,14 +14,16 @@ $(document).keypress(function(){
     }
 });
 
-// $("[type = button]").on("click",function(event){ //* we cannot do this as this is targeting a single element
-//     var userChosenColor = event.target.id;
-//     userClickPattern.push(userChosenColor);
-//     animatePress(userChosenColor);
-//     playSound(userChosenColor);
+/*
+ $("[type = button]").on("click",function(event){ //* we cannot do this as this is targeting a single element
+     var userChosenColor = event.target.id;
+     userClickPattern.push(userChosenColor);
+     animatePress(userChosenColor);
+     playSound(userChosenColor);
 
-//     checkAnswer(userClickedPattern.length - 1);
-// });
+     checkAnswer(userClickedPattern.length - 1);
+ });
+*/
 
 $(".btn").click(function() {
     var userChosenColor = $(this).attr("id");
