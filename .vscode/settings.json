@@ -16,5 +16,6 @@
         "ranges": "cpp",
         "span": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "workbench.colorTheme": "One Monokai"
 }
