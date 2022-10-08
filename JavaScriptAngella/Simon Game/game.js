@@ -14,24 +14,13 @@ $(document).keypress(function(){
     }
 });
 
-/*
- $("[type = button]").on("click",function(event){ //* we cannot do this as this is targeting a single element
-     var userChosenColor = event.target.id;
-     userClickPattern.push(userChosenColor);
-     animatePress(userChosenColor);
-     playSound(userChosenColor);
-
-     checkAnswer(userClickedPattern.length - 1);
- });
-*/
-
-$(".btn").click(function() {
-    var userChosenColor = $(this).attr("id");
+$("[type = button]").on("click",function(){ //* we cannot do this as this is targeting a single element
+    //  var userChosenColor = event.target.id;
+    var userChosenColor = $(this).attr("id"); // we want all the id
     userClickPattern.push(userChosenColor);
 
     playSound(userChosenColor);
     animatePress(userChosenColor);
-
     checkAnswer(userClickPattern.length - 1);
 });
 
