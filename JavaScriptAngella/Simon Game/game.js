@@ -25,7 +25,7 @@ $("[type = button]").on("click",function(){ //* we cannot do this as this is tar
 });
 
 function checkAnswer(currentLevel) {
-    if(gamePattern[currentLevel] === userClickPattern[currentLevel]) {
+    if(gamePattern[currentLevel] === userClickPattern[currentLevel]) { // here it is zero based indexing
         console.log("success");
 
         if(userClickPattern.length === gamePattern.length) {
