@@ -2,7 +2,7 @@ var buttonColors = ["red" , "blue" , "green", "yellow"];
 var gamePattern = [];
 var userClickPattern = [];
 
-var level = 0;
+var level = 1;
 var started = false;
 
 
