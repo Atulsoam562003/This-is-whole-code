@@ -17,5 +17,6 @@
         "span": "cpp",
         "valarray": "cpp"
     },
-    "workbench.colorTheme": "One Monokai"
+    "workbench.colorTheme": "One Monokai",
+    "git.ignoreLimitWarning": true
 }
