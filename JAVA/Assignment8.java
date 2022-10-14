@@ -1,5 +1,4 @@
 import java.util.*;
-
 class User {
     protected String firstName;
     protected String LastName;
@@ -8,9 +7,9 @@ class User {
     protected String pan;
     protected String email;
 
-    public void validate() {
+    public boolean validate() {
         boolean flag = true;
-        String temp = pan.toUpperCase();;
+        String temp = pan.toUpperCase();
         if(!temp.equals(pin)) flag = false;
         else if(pin.length() != 6) flag = false;
         int months = Integer.parseInt(DateOfBirth.substring(0, 2));
@@ -21,8 +20,9 @@ class User {
 
         if(!flag) {
             System.out.println("Please enter the values again you are not following rules : ");
-            return;
+            return false;
         }
+        return true;
     }
 
     public void setDetails() {
@@ -36,16 +36,19 @@ class User {
         String lastName = input.nextLine();
 
         System.out.print("Enter Date of Birth : ");
-        String DateOfBirth = input.next();
+        String DateOfBirth = input.nextLine();
 
         System.out.println("Enter the Email");
-        String email = input.next();
+        String email = input.nextLine();
 
         System.out.print("Enter pan : ");
         String pan = input.nextLine();
 
         System.out.print("Enter User-Id : ");
-        String pin = input.next();
+        String pin = input.nextLine();
+
+        boolean temp = validate();
+        if(!temp) setDetails();
         this.firstName = firstName;
         this.DateOfBirth = DateOfBirth;
         this.pin = pin;
@@ -71,6 +74,8 @@ class Student extends User {
     Student() {}
 
     Student(String firstName,String lastName, String DateOfBirth,String pan ,String pin, int rollno, int semester, float cpi,String email) {
+        boolean temp = validate();
+        // if(!temp) Student(firstName,lastName,DateOfBirth,pan,pin,rollno,semester,cpi,email);
         this.firstName = firstName;
         this.DateOfBirth = DateOfBirth;
         this.pin = pin;
@@ -139,6 +144,7 @@ class Faculty extends User {
     }
 
     Faculty(String firstName,String lastName, String DateOfBirth,String pan , String pin, String employeeId, String departmentName, int noOfPublications,String email) {
+        validate();
         this.firstName = firstName;
         this.DateOfBirth = DateOfBirth;
         this.pin = pin;
@@ -227,6 +233,7 @@ class Staff extends User {
     Staff() {}
 
     Staff(String firstName,String lastName, String DateOfBirth,String pan , String pin, String employeeId, String sectionName, String designation,String email) {
+        validate();
         this.firstName = firstName;
         this.pin = pin;
         this.DateOfBirth = DateOfBirth;
@@ -339,11 +346,11 @@ public class Assignment8 {
                     String pan = input.nextLine();
 
                     System.out.print("Enter Birth-Date : ");
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
                     input.nextLine();
 
                     System.out.println("Enter the Email: ");
-                    String Email = input.next();
+                    String Email = input.nextLine();
 
                     System.out.print("Enter User-Id : ");
                     String pin = input.nextLine();
@@ -367,7 +374,7 @@ public class Assignment8 {
                     k++;
                 } else if (choice1 == 2) {
                     System.out.print("Enter the Birth-date to get the details : ");
-                    String year = input.next();
+                    String year = input.nextLine();
                     input.nextLine();
 
                     for (int j = 0; j < k; j++) {
@@ -378,7 +385,7 @@ public class Assignment8 {
                     System.out.println("Enter User-Id,Employee-Id,Birth-date to display the detials");
                     String pin = input.nextLine();
                     String employeeId = input.nextLine();
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
                     input.nextLine();
                     for (int j = 0; j < k; j++) {
                         faculty[j].displayDetails(pin, employeeId, DateOfBirth);
@@ -440,7 +447,7 @@ public class Assignment8 {
                     String pan = input.nextLine();
 
                     System.out.print("Enter Date of Birth : ");
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
 
                     System.out.print("Enter User-Id : ");
                     String pin = input.nextLine();
@@ -450,7 +457,7 @@ public class Assignment8 {
                     input.nextLine();
 
                     System.out.println("Enter the Email: ");
-                    String email = input.next();
+                    String email = input.nextLine();
 
                     System.out.print("Enter Semester : ");
                     int semester = input.nextInt();
@@ -470,7 +477,7 @@ public class Assignment8 {
                     i++;
                 } else if (choice1 == 2) {
                     System.out.print("Enter the Birth-date to get the details : ");
-                    String year = input.next();
+                    String year = input.nextLine();
                     for (int j = 0; j < i; j++) {
                         student[j].showDetails(year);
                     }
@@ -479,7 +486,7 @@ public class Assignment8 {
                     System.out.println("Enter User-Id,Roll-No,Birth-date to display the detials");
                     String pin = input.nextLine();
                     int rollno = input.nextInt();
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
                     input.nextLine();
                     for (int j = 0; j < i; j++) {
                         student[j].displayDetails(pin, rollno, DateOfBirth);
@@ -508,12 +515,12 @@ public class Assignment8 {
                     String lastName = input.nextLine();
 
                     System.out.print("Enter Date of Birth : ");
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
                     input.nextLine();
 
 
                     System.out.println("Enter the Email: ");
-                    String email = input.next();
+                    String email = input.nextLine();
 
                     System.out.print("Enter pan : ");
                     String pan = input.nextLine();
@@ -541,7 +548,7 @@ public class Assignment8 {
                     l++;
                 } else if (choice1 == 2) {
                     System.out.print("Enter the Birth-date to get the details : ");
-                    String year = input.next();
+                    String year = input.nextLine();
                     input.nextLine();
                     for (int j = 0; j < l; j++) {
                         staff[j].showDetails(year);
@@ -550,7 +557,7 @@ public class Assignment8 {
                     System.out.println("Enter User-Id,Employee-Id,Birth-date to display the detials");
                     String pin = input.nextLine();
                     String employeeId = input.nextLine();
-                    String DateOfBirth = input.next();
+                    String DateOfBirth = input.nextLine();
                     input.nextLine();
                     for (int j = 0; j < l; j++) {
                         staff[j].displayDetails(pin, employeeId, DateOfBirth);
