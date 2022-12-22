@@ -1,0 +1,6 @@
+font-family: 'Varela Round', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+
+<div class="songInfo">
+            <img src="images/playing.gif" alt="" width="42px" id="gif"> <span id="masterSongName"></span>
+</div>
