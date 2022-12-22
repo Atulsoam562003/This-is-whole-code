@@ -14,8 +14,9 @@ app.use(express.static("public"));
 
 
 // mongoose.connect("mongodb://localhost:27017/todolistDB");
-mongoose.connect("mongodb+srv://admin-atul:Test123@cluster0.gfinxlx.mongodb.net/todolistDB");
-mongoose.connect("mongodb://mongo:FOaSRQEj24WuR56Obqmb@containers-us-west-187.railway.app:6665");
+// mongoose.connect("mongodb+srv://admin-atul:Test123@cluster0.gfinxlx.mongodb.net/todolistDB");
+mongoose.connect("mongodb://mongo:n8Aw1lZZYkYIhZOu7Apv@containers-us-west-113.railway.app:7234");
+// mongoose.connect("mongodb://mongo:FOaSRQEj24WuR56Obqmb@containers-us-west-187.railway.app:6665");
 
 const itemsSchema = {
   name : String
