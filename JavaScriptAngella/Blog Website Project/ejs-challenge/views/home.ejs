@@ -1,13 +1,13 @@
 <%- include("partials/header.ejs") -%>
 
 <h1>Home</h1>
-<p> <%= homeStartingContent %> </p>
+<p> <%= StartingContent %> </p>
 
-<% newPosts.forEach( (element) => {  %>
-    <h1> <%= element.title %> </h1> <br>
+<% posts.forEach( (element) => {  %>
+    <h1> <%= element.title %> </h1>
     <p>
         <%= element.content.substring(0, 100) + "..." %>
-        <a href="/posts/ <%= element.title %> ">Read More</a>
+        <a href="/posts/<%=element._id%>">Read More</a>
     </p>
 <% })  %>
 
