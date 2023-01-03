@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.editor.enablePreview": false,
+		"jest.disabledWorkspaceFolders": [
+			"keeper-app-part-2-starting-forked",
+			"usestate-hook-practice-forked"
+		],
+		"git.ignoreLimitWarning": true
+	}
+}
