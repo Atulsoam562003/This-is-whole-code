@@ -1,0 +1,2 @@
+-- Active: 1674727868130@@127.0.0.1@3306@btech
+SELECT * FROM class;
