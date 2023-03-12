@@ -82,7 +82,71 @@ const int N = 1e9 + 7;
 const int INF = LONG_LONG_MAX;
 
 void solve() {
+    int n,m; cin>>n>>m;
+
+    vector<string> vs;
+    vector<vector<char>> v(n,vector<char>(m));
+    vector<vector<int>> vis(n,vector<int>(m,0));
+    rep(i,n) {
+        string s; cin>>s;
+        vs.push_back(s);
+    }
+    rep(i,n) {
+        rep(j,m) {
+            v[i][j] = vs[i][j];
+        }
+    }
+    int x,y,a,b;
+    for(int i = 0; i < n; i++) 
+        for(int j = 0; j < m; j++) 
+            if(v[i][j] == 'A') x = i,y = j;
+            else if(v[i][j] == 'B') a = i,b = j;
+            else if(v[i][j] == '#') vis[i][j] = 1;
     
+    queue<pair<int,int>> q;
+    vector<vector<pair<int,int>>> path;
+    path.resize(n);
+    rep(i,n) path[i].resize(m);
+
+    rep(i,n) rep(j,m) path[i][j] = {-1,-1};
+
+
+    int dx[] = {-1,0,+1,0};
+    int dy[] = {0,-1,0,+1};
+    q.push({x,y});
+    int cnt = 0;
+    while(!q.empty()) {
+        auto node = q.front();
+        q.pop();
+        
+        for(int i = 0; i < 4; i++) {
+            int x = node.ff + dx[i];
+            int y = node.ss + dy[i];
+            if(x >= 0 and y >= 0 and x < n and y < m and !vis[x][y]) {
+                q.push({x,y});
+                vis[x][y] = 1;
+                path[x][y] = {dx[i],dy[i]};
+            }
+        }
+    }
+    if(vis[a][b]) {
+        vector<pair<int,int>> ans;
+        pair<int,int> end = {a,b};
+        while(end.ff != x or end.ss != y) {
+            ans.push_back(path[end.ff][end.ss]);
+            end.ff -= ans.back().ff;
+            end.ss -= ans.back().ss;
+        }
+        cout<<ans.size()<<endl;
+        reverse(all(ans));
+        for(auto x : ans) {
+            if(x.ff == 1) cout<<'D';
+            else if(x.ff == -1) cout<<'U';
+            else if(x.ss == 1) cout<<'R';
+            else cout<<'L';
+        }
+
+    } else pn;
 }
 
 int32_t main()
@@ -92,7 +156,7 @@ int32_t main()
     clock_t z = clock();
 
     int t = 1,i = 1;
-    cin >> t; 
+    // cin >> t; 
     while (t--){  
           // cout<<"Case #"<<i++<<": "; 
           solve();    

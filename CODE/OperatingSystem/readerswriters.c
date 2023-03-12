@@ -25,7 +25,7 @@ int main() {
 	// set sleep mod
 	if(readers > 5) sleepMod = readers;
 
-	pthread_t readers_t[MAX], writers_t[MAX];	
+	pthread_t readers_t[MAX], writers_t[MAX];
 	sem_init(&readAccess, 0, 1);
 	sem_init(&bookAccess, 0, 1);
 
